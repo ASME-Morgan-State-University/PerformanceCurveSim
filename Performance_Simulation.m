@@ -14,7 +14,7 @@ P.bikeMass = 34;              % kg
 P.riderMass = 82;             % kg 
 P.totalMass = P.bikeMass + P.riderMass; 
 %% ----------------------------- 
-% Aerodynamics 
+% Aerodynamics ??? TODO (explain equaition) 
 %------------------------------ 
 P.CdA = 0.30;                 % m^2 
 P.rho = 1.225;                % kg/m^3 
@@ -33,10 +33,10 @@ P.wheelRadius = 0.3302;       % meters
 %------------------------------ 
 P.batteryVoltage = 48;        % Volts 
 P.batteryCapacityWh = 480;    % Watt-hours 
-P.batteryEnergy = P.batteryCapacityWh * 3600; 
+P.batteryEnergy = P.batteryCapacityWh * 3600; % ??? TODO (elaborate)
 P.lowVoltageCutoff = 41;      % Volts 
 %% ----------------------------- 
-% Motor (Bafang G020) 
+% Motor (Bafang G020) ??? TODO (Source Material)
 %------------------------------ 
 P.motorRatedPower = 500;      % W 
 P.motorPeakPower = 500;       % Controller limited 
@@ -45,7 +45,7 @@ P.motorEfficiency = 0.90;
 P.motorMaxTorque = 45;        % Nm 
 P.controllerCurrentLimit = P.motorPeakPower / P.batteryVoltage; 
 %% ----------------------------- 
-% Rider 
+% Rider ??? TODO (Add disclaimer)
 %------------------------------ 
 P.averageRiderPower = 200;    % W 
 P.maxSprintPower = 325;       % W 
@@ -56,7 +56,7 @@ P.recoveryPower = 140;        % W
 P.dt = 0.1; 
 P.simulationTime = 900;       % seconds 
 %% ----------------------------- 
-% Speed Controller 
+% Speed Controller ??? TODO
 %------------------------------ 
 P.Kp = 350; 
 %% ----------------------------- 
@@ -64,7 +64,7 @@ P.Kp = 350;
 %------------------------------ 
 P.cruiseSpeedMPH = 25; 
 %% ----------------------------- 
-% Optimization Ranges 
+% Optimization Ranges ??? TODO (Needs Explaining) 
 %------------------------------ 
 P.study.riderPower = 100:25:300; 
 P.study.CdA = 0.20:0.025:0.40; 
@@ -73,7 +73,7 @@ P.study.Crr = 0.003:0.001:0.007;
 P.study.cruiseSpeed = 18:2:30; 
 P.study.batteryCapacity = [360 480 600 720]; 
 %% ----------------------------- 
-% Course Parameters 
+% Course Parameters ??? TODO (slight elaboration)
 %------------------------------ 
 P.turn1Start = 60; 
 P.turn1End = 90; 
